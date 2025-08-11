@@ -14,5 +14,26 @@ Users are stored in-memory (Python list) for demonstration purposes.
 | DELETE | /users/<id>        | Delete a user        |
 
 ## Installation
+Access in Browser or Postman
+
+GET all users: http://127.0.0.1:5000/users
+
+GET single user: http://127.0.0.1:5000/users/1
+POST new user:
 ```bash
 pip install flask
+bash
+POST /users
+Content-Type: application/json
+{
+  "name": "Charlie",
+  "email": "charlie@example.com"
+}
+PUT update user:
+PUT /users/1
+Content-Type: application/json
+{
+  "name": "Alice Updated"
+}
+DELETE user:
+DELETE /users/1
